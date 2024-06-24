@@ -19,14 +19,7 @@ const Filters = ({ resume }) => {
   const searchParams = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isUrlUpdated, setIsUrlUpdated] = useState(true);
-  const {
-    nationality,
-    setNationality,
-    job,
-    setJob,
-    contractType,
-    setContractType,
-  } = useTheme();
+  const { setNationality, setJob, setContractType } = useTheme();
   const handleChangeNationality = (value) => {
     setNationality(value);
     const newUrl = formUrlQuery({
